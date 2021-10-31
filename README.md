@@ -10,7 +10,7 @@ Turns out, for the 200 most common names in America according to the [SSA](https
 
 I calculated the space it would take to store 158,649,724 peoples names with the weighting from the SSA and compared it to saving a reference to the some peoples names in another table.
 
-99.92% space savings. The savings slowly cuts off as you start to get in to having millions of unique names. But by that time, you've already saved plenty of space.
+83.31% space savings. The savings slowly cuts off as you start to get in to having millions of unique names. But by that time, you've already saved plenty of space.
 
 ## Bits required to save x number of names
 
