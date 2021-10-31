@@ -203,28 +203,41 @@ names = [
     ["Kayla",	    340511]
 ]
 
+total_characters_for_names_table = 0
 total_characters_to_save = 0
 total_people = 0
 for n in names:
     name = n[0]
     num = n[1]
+    total_characters_for_names_table += len(name)
     total_characters_to_save += len(name) * num
     total_people += num
 
+# weights each name by the number of people with that name
 average_length = math.ceil(total_characters_to_save / total_people)
 
 # Totals to save every character of every name
 print("Average name length", average_length)
 print("Number of people", total_people)
 print("Total number of letters", total_characters_to_save)
+
+print("Saving a name on every user in the users table")
 print("kB to save every persons name: ", total_characters_to_save / 1024)
 print("mB to save every persons name: ", total_characters_to_save / 1024 / 1024)
 print("gB to save every persons name: ", total_characters_to_save / 1024 / 1024 / 1024)
 
+print()
 total_pointers_to_save = total_people
-print("kB to save a name for every person: ", total_pointers_to_save / 1024)
-print("mB to save a name for every person: ", total_pointers_to_save / 1024 / 1024)
-print("gB to save a name for every person: ", total_pointers_to_save / 1024 / 1024 / 1024)
+print("Saving a pointer to name from the users table to the names table")
+print("kB to point to a name for every person: ", total_pointers_to_save / 1024)
+print("mB to point to a name for every person: ", total_pointers_to_save / 1024 / 1024)
+print("gB to point to a name for every person: ", total_pointers_to_save / 1024 / 1024 / 1024)
 
 print(f"Saving pointers to names in a database represents an average savings of {(1 - total_pointers_to_save / total_characters_to_save):%}")
 
+print()
+# It only takes about 1kb to store all of the top 200 names
+print("Number of characters to save on the names table: ", total_characters_for_names_table)
+print("kB to save all of the names on their own table: ", total_characters_for_names_table / 1024)
+print("mB to save all of the names on their own table: ", total_characters_for_names_table / 1024 / 1024)
+print("gB to save all of the names on their own table: ", total_characters_for_names_table / 1024 / 1024 / 1024)
