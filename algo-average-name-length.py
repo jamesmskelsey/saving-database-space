@@ -221,7 +221,7 @@ print("kB to save every persons name: ", total_characters_to_save / 1024)
 print("mB to save every persons name: ", total_characters_to_save / 1024 / 1024)
 print("gB to save every persons name: ", total_characters_to_save / 1024 / 1024 / 1024)
 
-total_pointers_to_save = total_people / len(names)
+total_pointers_to_save = total_people
 print("kB to save a name for every person: ", total_pointers_to_save / 1024)
 print("mB to save a name for every person: ", total_pointers_to_save / 1024 / 1024)
 print("gB to save a name for every person: ", total_pointers_to_save / 1024 / 1024 / 1024)
